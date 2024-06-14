@@ -4,6 +4,8 @@ import { CartContext } from "../contexts/CartContext";
 const Cart = () => {
   const { cartItems } = useContext(CartContext);
 
+  console.log("Cart items during render:", cartItems);
+
   return (
     <div>
       <h2>Shopping Cart</h2>

@@ -1,9 +1,11 @@
 import React from "react";
 
 const Header = () => {
+  console.log("Header rendered");
+
   return (
     <header>
-      <h1>TechNest</h1>
+      <h1>QuantumTech</h1>
       <nav>
         <a href="/">Home</a>
         <a href="/cart">Cart</a>

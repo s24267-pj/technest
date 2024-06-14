@@ -8,7 +8,6 @@ const ProductDetail = () => {
   const [product, setProduct] = useState(null);
 
   useEffect(() => {
-    // Fetch product details based on productId here
     const productData = [
       {
         id: 1,
@@ -31,12 +30,18 @@ const ProductDetail = () => {
     return <div>Loading...</div>;
   }
 
+  const handleAddToCart = () => {
+    console.log("Adding to cart:", product);
+    addToCart(product);
+    alert(`${product.name} has been added to the cart!`);
+  };
+
   return (
     <div>
       <h2>{product.name}</h2>
       <p>Price: ${product.price}</p>
       <p>{product.description}</p>
-      <button onClick={() => addToCart(product)}>Add to Cart</button>
+      <button onClick={handleAddToCart}>Add to Cart</button>
     </div>
   );
 };
